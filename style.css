@@ -1,0 +1,267 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(181, 235, 194);
+}
+
+.menu {
+  height: 60%;
+  width: 100%;
+  background-color: #0b4d4dad;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  color: white;
+  font-family: cursive;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo-img {
+  width: 45px;
+}
+
+.logo p {
+  width: 20px;
+}
+
+.menu-direito {
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-right: 30px;
+  justify-content: flex-end;
+}
+
+.menu-favoritos,
+.menu-user {
+  align-items: center;
+  display: flex;
+  gap: .5rem;
+}
+
+.menu-favoritos span,
+.menu-user span {
+  border-bottom: 3px solid transparent;
+  transition: .5s;
+}
+
+.menu-favoritos span:hover,
+.menu-user span:hover {
+  border-bottom: 3px solid white;
+}
+
+.menu-favoritos-img,
+.icon-menu-user {
+  height: 20px;
+}
+
+.text-favoritos,
+.text-user {
+  color: #FFF;
+  font-weight: 200;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nav ul {
+  display: flex;
+  gap: 75px;
+  font-size: 18px;
+}
+
+.body-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.banner-img {
+  width: 100%;
+  display: flex;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 90);
+}
+
+.title-livros {
+  font-size: 1.5rem;
+  padding-left: 60px;
+  font-family: 'Pacifico', cursive;
+}
+
+.title-autores {
+  font-size: 1.5rem;
+  padding-left: 60px;
+  font-family: 'Pacifico', cursive;
+  padding-top: 50px;
+}
+
+
+.conteiner-card-livros {
+  padding-right: 60px;
+  padding-left: 60px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.card-livros {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 15px 0px #D6D6D6;
+}
+
+.flip-container,
+.front,
+.back {
+  width: 300px;
+  height: 400px;
+}
+
+.front {
+  gap: 1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotateY(0deg);
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.back {
+  gap: 1rem;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  flex-direction: column;
+  transform: rotateY(180deg);
+}
+
+.sinopse-title {
+  color: #0b4d4d;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sinopse-livro {
+  justify-content: center;
+  text-align: justify;
+  font-size: 1rem;
+  width: 250px;
+
+}
+
+.img-capa-livro {
+  height: 200px;
+  border: .5px solid #000;
+  width: 150px;
+  display: flex;
+}
+
+.nome-autor-card {
+  display: flex;
+  justify-content: center;
+  color: #4f4e4e;
+}
+
+.title-livro-card {
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-preco {
+  height: 35px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #0b4d4dad;
+  border: none;
+  color: #FFF;
+}
+
+.flip-container {
+  perspective: 1000;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  transition: 0.6s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.autores-conteiner {
+  justify-content: space-between;
+  padding-right: 60px;
+  padding-left: 60px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.card-autor {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img-autor {
+  height: 150px;
+  border-radius: 50%;
+}
+
+.img-autor:hover{
+  border: 5px solid #0b4d4dad;
+  box-shadow: 0px 0px 5px 2px #0b4d4dad;
+  transition: .2s all ease-in-out;
+}
+
+.autor-nome {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+}
